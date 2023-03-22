@@ -1,0 +1,78 @@
+1.	Посмотреть, где я
+pwd
+* * *
+2.	Создать папку
+mkdir folder1
+* * *
+3.	Зайти в папку
+cd folder1
+* * *
+4.	Создать 3 папки
+mkdir 1folder 2folder 3folder
+* * *
+5.	Зайти в любую папку
+cd 1folder
+* * *
+6.	Создать 5 файлов (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt file4.json file5.json
+* * *
+7.	Создать 3 папки
+mkdir 1new_folder 2new_folder 3new_folder
+* * *
+8.	Вывести список содержимого папки
+ls -la
+* * *
+9.	 Открыть любой txt файл
+vim file1.txt
+* * *
+10.	+ написать туда что-нибудь, любой текст
+i
+* * *
+11.	+ сохранить и выйти
+ESC :wq
+* * *
+12.	Выйти из папки на уровень выше
+cd ..
+* * *
+13.	Переместить любые 2 файла, которые вы создали, в любую другую папку
+mv 1folder/*.json 2folder
+* * *
+14.	Скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp 1folder/{file1.txt,file2.txt} 3folder
+* * *
+15.	Найти файл по имени
+find . -name file2.txt
+* * *
+16.	Просмотреть содержимое в реальном времени (команда grep)
+cd 1folder ls | grep file1.txt
+* * *
+17.	Вывести несколько первых строк из текстового файла
+head file1.txt
+* * *
+18.	Вывести несколько последних строк из текстового файла
+tail file1.txt
+* * *
+19.	Просмотреть содержимое длинного файла (команда less)
+less file1.txt
+* * *
+20.	Вывести дату и время
+date
+* * *
+21.	Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+* * *
+22.	Написать скрипт, который выполнит автоматически п. 3, 4, 5, 6, 7, 8, 13
+touch myscript.txt
+vim myscript.txt i:
+#!/bin/bash
+cd folder1
+mkdir 1folder 2folder 3folder
+cd 1folder
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir 1new_folder 2new_folder 3new_folder
+ls -la
+mv 1folder/*.json 2folder
+ESC :wq
+chmod +x ./myscript.txt
+./myscript.txt
+* * *
